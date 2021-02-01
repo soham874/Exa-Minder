@@ -5,6 +5,7 @@ import logo from '../../Assets/Exa-Minder(Light).png'
 import './registration.css'
 import { Link } from 'react-router-dom'
 import { Checkbox } from '@material-ui/core'
+import fire from '../../Config/fire'
 
 const patternFirstName = RegExp('^[A-Z][a-z]{2,}$')
 const patternLastName = RegExp('^[A-Z][a-z]{2,}$')
@@ -73,25 +74,20 @@ export default class registrationForm extends React.Component {
 
     //pushes the data object to server
     pushInfo = () => {
-        let data = {
-            "firstName": inputValues[0],
-            "lastName": inputValues[1],
-            "email": inputValues[2],
-            "service": "advance",
-            "password": inputValues[3]
-        }
+        // let data = {
+        //     "firstName": inputValues[0],
+        //     "lastName": inputValues[1],
+        //     "email": inputValues[2],
+        //     "service": "advance",
+        //     "password": inputValues[3]
+        // }
 
-        // userServices.registration(data).then((response) => {
-        //     console.log(response)
-        //     SimpleSnackbar.handleClick("Email registered successfully")
-        //     setTimeout(() => {
-        //         this.props.history.push("/login")
-        //     }, 3000)
-        // }).catch((error) => {
-        //     console.log(error);
-        //     this.state.userName.current.setCustomError("This email already exists")
-        //     SimpleSnackbar.handleClick("This email already exists")
-        // })
+        console.log(fire)
+        fire.auth().createUserWithEmailAndPassword(inputValues[2],inputValues[3]).then((response)=>{
+            console.log(response)
+        }).catch((error)=>{
+            console.log(error)
+        })
     }
 
     //toggles visibility of password and confirm box
