@@ -8,7 +8,7 @@
     margin: auto;
     margin-top: 75px;
     padding: 30px;
-    width: 700px;
+    width: 870px;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
@@ -28,7 +28,7 @@
 }
 
 .left_container {
-    width: 400px;
+    width: 500px;
 }
 
 .right_container {
@@ -87,7 +87,7 @@ button:hover {
     background-color: lightblue;
 }
 
-@media only screen and (max-width:800px) and (min-width:530px) {
+@media only screen and (max-width:1000px) and (min-width:530px) {
     .formback {
         width: 450px;
     }

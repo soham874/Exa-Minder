@@ -111,7 +111,7 @@ export default class registrationForm extends React.Component {
                         <span style={{ color: "#4285F4" }}>Exa-Minder</span>
                         </b>
                     </div>
-                    <div className="independet_text">Create a new account and get ready to tackle those exams!</div>
+                    <div className="independet_text">Create a new account and get ready to tackle those exams systematically!</div>
 
                     <div className="name_field_containers">
                         <TextInput label="First Name" ref={this.state.firstName} parentCallback={this.handleCallback} />
