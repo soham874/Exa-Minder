@@ -85,8 +85,10 @@ export default class registrationForm extends React.Component {
         console.log(fire)
         fire.auth().createUserWithEmailAndPassword(inputValues[2],inputValues[3]).then((response)=>{
             console.log(response)
+            SimpleSnackbar.handleClick("Account created successfully")
         }).catch((error)=>{
             console.log(error)
+            SimpleSnackbar.handleClick(error.message)
         })
     }
 
