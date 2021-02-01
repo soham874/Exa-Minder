@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from '../../Assets/Exa-Minder(Light).png'
 import { TextInput } from '../CommonComponents/InputField/inputFields'
 import { Link } from 'react-router-dom'
 import { Checkbox } from '@material-ui/core'
@@ -57,13 +58,10 @@ export default class loginForm extends React.Component {
         return (
             <form className="loginFormback">
                 <div className="independet_text" style={{ textAlign: 'center' }}>
-                    <b><span style={{ color: "#4285F4" }}>F</span>
-                        <span style={{ color: "#DB4437" }}>u</span>
-                        <span style={{ color: "#F4B400" }}>n</span>
-                        <span style={{ color: "#4285F4" }}>d</span>
-                        <span style={{ color: "#0F9D58" }}>o</span>
-                        <span style={{ color: "#DB4437" }}>o</span></b>
-                    <p>Sign In your Fundoo account</p>
+                    <b>
+                        <img src={logo} style={{ height: 128 }} alt="Signup logo" />
+                    </b>
+                    <p>Sign into your Exa-Minder account</p>
                 </div>
 
                 <TextInput label="Email" ref={this.state.userName} parentCallback={this.handleCallback} />
