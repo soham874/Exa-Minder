@@ -1,12 +1,13 @@
 import React from 'react'
-import { TextInput } from '../InputField/inputFields'
+import { TextInput } from '../CommonComponents/InputField/inputFields'
+import logo from '../../Assets/Exa-Minder(Light).png'
 import '../Login/login.css'
 import '../Registration/registration.css'
 import { Link } from 'react-router-dom'
-import UserServices from '../../services/userService'
-import SimpleSnackbar from '../Snackbar/snackbarMessages'
+// import UserServices from '../../services/userService'
+import SimpleSnackbar from '../CommonComponents/Snackbar/snackbarMessages'
 
-const userServices = new UserServices()
+// const userServices = new UserServices()
 
 export default class loginForm extends React.Component {
     constructor(props) {
@@ -31,17 +32,17 @@ export default class loginForm extends React.Component {
                 "email": username
             }
 
-            userServices.resetEmail(data).then((response) => {
-                console.log(response)
-                this.state.userName.current.resetField()
-                SimpleSnackbar.handleClick("Reset link sent successfully")
-                setTimeout(() => {
-                    this.props.history.push("/login")
-                }, 3000)
-            }).catch((error) => {
-                this.state.userName.current.setCustomError("Email doesnot exist in database")
-                console.log(error)
-            })
+            // userServices.resetEmail(data).then((response) => {
+            //     console.log(response)
+            //     this.state.userName.current.resetField()
+            //     SimpleSnackbar.handleClick("Reset link sent successfully")
+            //     setTimeout(() => {
+            //         this.props.history.push("/login")
+            //     }, 3000)
+            // }).catch((error) => {
+            //     this.state.userName.current.setCustomError("Email doesnot exist in database")
+            //     console.log(error)
+            // })
         }
     }
 
@@ -49,13 +50,9 @@ export default class loginForm extends React.Component {
         return (
             <form className="loginFormback">
                 <div className="independet_text" style={{ textAlign: 'center' }}>
-                    <b><span style={{ color: "#4285F4" }}>F</span>
-                        <span style={{ color: "#DB4437" }}>u</span>
-                        <span style={{ color: "#F4B400" }}>n</span>
-                        <span style={{ color: "#4285F4" }}>d</span>
-                        <span style={{ color: "#0F9D58" }}>o</span>
-                        <span style={{ color: "#DB4437" }}>o</span></b>
-                    <p>Use registered email to reset your Fundoo account password</p>
+                    <b><img src={logo} style={{ height: 128 }} alt="Signup logo" />               
+                        </b>
+                    <p>Studying so much you lost your password? Dont worry we got you covered!</p>
                 </div>
 
                 <TextInput label="Email" ref={this.state.userName} parentCallback={this.handleCallback} />

@@ -108,7 +108,7 @@ export default class registrationForm extends React.Component {
 
                 <div className="independet_text">
                         <b>
-                        <span style={{ color: "#4285F4" }}>Exa-Minder</span>
+                        <img src={logo} className={"alternate_logo"} style={{ height: 128, marginLeft:'auto',marginRight:'auto' }} alt="Signup logo" />
                         </b>
                     </div>
                     <div className="independet_text">Create a new account and get ready to tackle those exams systematically!</div>
