@@ -1,16 +1,10 @@
 import React from 'react'
-import { TextInput } from '../InputField/inputFields'
-import SimpleSnackbar from '../Snackbar/snackbarMessages'
-import logo from '../../Assets/account.svg'
+import { TextInput } from '../CommonComponents/InputField/inputFields'
+import SimpleSnackbar from '../CommonComponents/Snackbar/snackbarMessages'
+import logo from '../../Assets/Exa-Minder(Light).png'
 import './registration.css'
 import { Link } from 'react-router-dom'
 import { Checkbox } from '@material-ui/core'
-import UserServices from '../../services/userService'
-
-// soham8744@gmail.com
-// abcdefgQ1!
-
-const userServices = new UserServices()
 
 const patternFirstName = RegExp('^[A-Z][a-z]{2,}$')
 const patternLastName = RegExp('^[A-Z][a-z]{2,}$')
@@ -87,17 +81,17 @@ export default class registrationForm extends React.Component {
             "password": inputValues[3]
         }
 
-        userServices.registration(data).then((response) => {
-            console.log(response)
-            SimpleSnackbar.handleClick("Email registered successfully")
-            setTimeout(() => {
-                this.props.history.push("/login")
-            }, 3000)
-        }).catch((error) => {
-            console.log(error);
-            this.state.userName.current.setCustomError("This email already exists")
-            SimpleSnackbar.handleClick("This email already exists")
-        })
+        // userServices.registration(data).then((response) => {
+        //     console.log(response)
+        //     SimpleSnackbar.handleClick("Email registered successfully")
+        //     setTimeout(() => {
+        //         this.props.history.push("/login")
+        //     }, 3000)
+        // }).catch((error) => {
+        //     console.log(error);
+        //     this.state.userName.current.setCustomError("This email already exists")
+        //     SimpleSnackbar.handleClick("This email already exists")
+        // })
     }
 
     //toggles visibility of password and confirm box
@@ -112,15 +106,12 @@ export default class registrationForm extends React.Component {
             <div className="formback">
                 <form className="left_container">
 
-                    <div className="independet_text">
-                        <b><span style={{ color: "#4285F4" }}>F</span>
-                            <span style={{ color: "#DB4437" }}>u</span>
-                            <span style={{ color: "#F4B400" }}>n</span>
-                            <span style={{ color: "#4285F4" }}>d</span>
-                            <span style={{ color: "#0F9D58" }}>o</span>
-                            <span style={{ color: "#DB4437" }}>o</span></b>
+                <div className="independet_text">
+                        <b>
+                        <span style={{ color: "#4285F4" }}>Exa-Minder</span>
+                        </b>
                     </div>
-                    <div className="independet_text">Create your Fundoo Account</div>
+                    <div className="independet_text">Create a new account and get ready to tackle those exams!</div>
 
                     <div className="name_field_containers">
                         <TextInput label="First Name" ref={this.state.firstName} parentCallback={this.handleCallback} />
@@ -149,7 +140,6 @@ export default class registrationForm extends React.Component {
 
                 <div className="right_container">
                     <img src={logo} style={{ height: 256 }} alt="Signup logo" />
-                    <div style={{ width: '250px', opacity: 0.6 }}>One account. All of Fundoo working for you.</div>
                 </div>
 
                 <SimpleSnackbar />
