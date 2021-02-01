@@ -1,12 +1,9 @@
 import React from 'react'
-import { TextInput } from '../InputField/inputFields'
+import { TextInput } from '../CommonComponents/InputField/inputFields'
 import '../Registration/registration.css'
 import { Checkbox } from '@material-ui/core'
 
-import UserServices from '../../services/userService'
-import SimpleSnackbar from '../Snackbar/snackbarMessages'
-
-const userServices = new UserServices()
+import SimpleSnackbar from '../CommonComponents/Snackbar/snackbarMessages'
 
 const patternPassword = RegExp('(?=.*[A-Z])(?=.*[0-9])(?=[^.,:;!@#$%^&*_+=]*[.,:;!@#$%^&*_+=][^.,:;!@#$%^&*_+=]*$).{8,}$')
 
@@ -45,20 +42,20 @@ export default function ResetForm(props) {
             return
         }
 
-        let data = {
-            "newPassword": password
-        }
+        // let data = {
+        //     "newPassword": password
+        // }
 
-        userServices.resetPassword(data, token).then((response) => {
-            console.log(response)
-            SimpleSnackbar.handleClick("Password has been reset successfully")
-            setTimeout(() => {
-                props.history.push("/login")
-            }, 3000)
-        }).catch((error) => {
-            SimpleSnackbar.handleClick("Password reset failed")
-            console.log(error)
-        })
+        // userServices.resetPassword(data, token).then((response) => {
+        //     console.log(response)
+        //     SimpleSnackbar.handleClick("Password has been reset successfully")
+        //     setTimeout(() => {
+        //         props.history.push("/login")
+        //     }, 3000)
+        // }).catch((error) => {
+        //     SimpleSnackbar.handleClick("Password reset failed")
+        //     console.log(error)
+        // })
     }
 
     return (

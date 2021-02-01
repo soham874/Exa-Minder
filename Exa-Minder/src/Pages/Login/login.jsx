@@ -36,10 +36,10 @@ export default class loginForm extends React.Component {
             if (username.length === 0)
                 this.state.userName.current.setFieldEmpty("Username")
         } else {
-            let data = {
-                "email": username,
-                "password": password
-            }
+            // let data = {
+            //     "email": username,
+            //     "password": password
+            // }
             // userServices.login(data).then((response) => {
             //     console.log(response)
             //     localStorage.setItem('userId',response.data.id)
