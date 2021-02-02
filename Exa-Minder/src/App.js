@@ -12,7 +12,7 @@ function App() {
       <Router>
         <Switch>
           <Redirect path="/" exact to="/login"/>
-          <Route path="/login" exact component={Login} />
+          <Route path="/Exa-Minder/login" exact component={Login} />
           <Route path="/registration" component={Registration} />
           <Route path="/forgot-password" component={Forgot} />
           <Route path="/resetpassword" component={Reset} />

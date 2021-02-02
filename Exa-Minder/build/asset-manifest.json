@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Exa-Minder/login/static/css/main.47e9616b.chunk.css",
+    "main.js": "/Exa-Minder/login/static/js/main.ea58c93b.chunk.js",
+    "main.js.map": "/Exa-Minder/login/static/js/main.ea58c93b.chunk.js.map",
+    "runtime-main.js": "/Exa-Minder/login/static/js/runtime-main.fb7205e2.js",
+    "runtime-main.js.map": "/Exa-Minder/login/static/js/runtime-main.fb7205e2.js.map",
+    "static/js/2.ae0ba52c.chunk.js": "/Exa-Minder/login/static/js/2.ae0ba52c.chunk.js",
+    "static/js/2.ae0ba52c.chunk.js.map": "/Exa-Minder/login/static/js/2.ae0ba52c.chunk.js.map",
+    "static/js/3.70df02a4.chunk.js": "/Exa-Minder/login/static/js/3.70df02a4.chunk.js",
+    "static/js/3.70df02a4.chunk.js.map": "/Exa-Minder/login/static/js/3.70df02a4.chunk.js.map",
+    "index.html": "/Exa-Minder/login/index.html",
+    "static/css/main.47e9616b.chunk.css.map": "/Exa-Minder/login/static/css/main.47e9616b.chunk.css.map",
+    "static/js/2.ae0ba52c.chunk.js.LICENSE.txt": "/Exa-Minder/login/static/js/2.ae0ba52c.chunk.js.LICENSE.txt",
+    "static/media/Exa-Minder(Light).58ea99d5.png": "/Exa-Minder/login/static/media/Exa-Minder(Light).58ea99d5.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fb7205e2.js",
+    "static/js/2.ae0ba52c.chunk.js",
+    "static/css/main.47e9616b.chunk.css",
+    "static/js/main.ea58c93b.chunk.js"
+  ]
+}
