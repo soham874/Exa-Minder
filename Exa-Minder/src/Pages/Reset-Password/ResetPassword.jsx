@@ -3,7 +3,7 @@ import { TextInput } from '../CommonComponents/InputField/inputFields'
 import '../Registration/registration.css'
 import { Checkbox } from '@material-ui/core'
 import logo from '../../Assets/Exa-Minder(Light).png'
-import fire from '../../Config/fire'
+// import fire from '../../Config/fire'
 
 import SimpleSnackbar from '../CommonComponents/Snackbar/snackbarMessages'
 

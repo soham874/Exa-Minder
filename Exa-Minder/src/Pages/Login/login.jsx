@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { Checkbox } from '@material-ui/core'
 import SimpleSnackbar from '../CommonComponents/Snackbar/snackbarMessages'
 import './login.css'
+import fire from '../../Config/fire'
 
 export default class loginForm extends React.Component {
     constructor(props) {
@@ -36,6 +37,14 @@ export default class loginForm extends React.Component {
             if (username.length === 0)
                 this.state.userName.current.setFieldEmpty("Username")
         } else {
+
+            fire.auth().signInWithEmailAndPassword(username,password).then((response)=>{
+                console.log(response)
+                SimpleSnackbar.handleClick("Signed in successfully")
+            }).catch((error)=>{
+                console.log(error)
+                SimpleSnackbar.handleClick(error.message)
+            })           
             // let data = {
             //     "email": username,
             //     "password": password
