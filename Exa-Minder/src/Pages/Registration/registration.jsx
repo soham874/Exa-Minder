@@ -74,18 +74,25 @@ export default class registrationForm extends React.Component {
 
     //pushes the data object to server
     pushInfo = () => {
-        // let data = {
-        //     "firstName": inputValues[0],
-        //     "lastName": inputValues[1],
-        //     "email": inputValues[2],
-        //     "service": "advance",
-        //     "password": inputValues[3]
-        // }
+        let data = {
+            "firstName": inputValues[0],
+            "lastName": inputValues[1],
+            "email": inputValues[2],
+        }
 
-        console.log(fire)
         fire.auth().createUserWithEmailAndPassword(inputValues[2],inputValues[3]).then((response)=>{
             console.log(response)
             SimpleSnackbar.handleClick("Account created successfully")
+            
+            let ref = fire.database().ref().child('userInfo').push(data)
+            ref.then((response)=>{
+                console.log(response.path.pieces_[1])
+            }).catch((error)=>{
+                console.log(error)
+            })
+
+            fire.auth().signOut()
+            
         }).catch((error)=>{
             console.log(error)
             SimpleSnackbar.handleClick(error.message)
