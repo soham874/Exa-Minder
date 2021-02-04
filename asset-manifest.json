@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Exa-Minder/static/css/main.47e9616b.chunk.css",
-    "main.js": "/Exa-Minder/static/js/main.528d0bda.chunk.js",
-    "main.js.map": "/Exa-Minder/static/js/main.528d0bda.chunk.js.map",
+    "main.js": "/Exa-Minder/static/js/main.2b194a23.chunk.js",
+    "main.js.map": "/Exa-Minder/static/js/main.2b194a23.chunk.js.map",
     "runtime-main.js": "/Exa-Minder/static/js/runtime-main.37100c85.js",
     "runtime-main.js.map": "/Exa-Minder/static/js/runtime-main.37100c85.js.map",
     "static/js/2.f5844d92.chunk.js": "/Exa-Minder/static/js/2.f5844d92.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.37100c85.js",
     "static/js/2.f5844d92.chunk.js",
     "static/css/main.47e9616b.chunk.css",
-    "static/js/main.528d0bda.chunk.js"
+    "static/js/main.2b194a23.chunk.js"
   ]
 }
