@@ -14,7 +14,7 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/registration" component={Registration} />
         <Route path="/forgot-password" component={Forgot} />
-        <Route path="/resetpassword" component={Reset} />
+        <Route path="*/resetpassword" component={Reset} />
       
     </div>
   );
