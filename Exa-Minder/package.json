@@ -2,7 +2,7 @@
     "name": "exa-minder",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://soham874.github.io/Exa-Minder/",
+    "homepage": "https://soham874.github.io/Exa-Minder",
     "dependencies": {
         "@material-ui/core": "^4.11.3",
         "@testing-library/jest-dom": "^5.11.9",
@@ -40,5 +40,8 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "devDependencies": {
+        "gh-pages": "^3.1.0"
     }
 }
